@@ -1,0 +1,25 @@
+# User configuration (contains plaintext passwords)
+users.json
+
+# Runtime workspace, logs & archives
+printguard_workspace/
+archives/
+page_counts.json
+*.log
+
+# Optional notification audio
+*.mp3
+*.wav
+
+# Python artifacts & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

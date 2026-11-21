@@ -1,0 +1,21 @@
+[Unit]
+Description=PrintGuard - CUPS Print & Optical Verification Server
+After=network-online.target cups.service tailscaled.service
+Wants=network-online.target cups.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/printguard
+Environment=PYTHONUNBUFFERED=1
+Environment=PRINTGUARD_HOST=0.0.0.0
+Environment=PRINTGUARD_PORT=5000
+Environment=PRINTGUARD_CAMERA_INDEX=0
+Environment=PRINTGUARD_WORKSPACE=/opt/printguard/printguard_workspace
+Environment=PRINTGUARD_USERS_FILE=/opt/printguard/users.json
+ExecStart=/opt/printguard/venv/bin/python /opt/printguard/printguard.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

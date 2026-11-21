@@ -1,0 +1,12 @@
+{
+  "admin": {
+    "password": "change_me",
+    "can_reset": true,
+    "display_name": "Admin"
+  },
+  "user1": {
+    "password": "change_me_too",
+    "can_reset": false,
+    "display_name": "User 1"
+  }
+}
